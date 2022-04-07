@@ -1,11 +1,11 @@
 # Intra-Encrypt
 
-##What It Does So Far
+## What It Does So Far
 - Creates a node on the device which listens on specified port
 - Creates a TUN interface to capture traffic
 - Associates with and accepts traffic from the TUN interface(have to implement the forwarding)
 
-##To-Do
+## To-Do
 - Add directions to create routes on linux host to direct traffic through TUN interface
   - Not too difficult and can be scripted  
 - Figure out the neighbor discovery mechanism of this system
