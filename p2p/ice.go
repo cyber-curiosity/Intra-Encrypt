@@ -36,7 +36,7 @@ func main() {
 	fmt.Println("[*]Creating TUN Interface...")
 
 	tunDev, err = tun.New(
-		"tun69",
+		"tun_ice",
 		tun.Address("192.168.72.1/24"),
 		tun.MTU(1420),
 	)
