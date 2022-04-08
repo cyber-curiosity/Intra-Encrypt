@@ -8,7 +8,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	datastore "github.com/ipfs/go-datastore"
+	"github.com/ipfs/go-datastore"
 	"github.com/libp2p/go-libp2p"
 	"github.com/libp2p/go-libp2p-core/host"
 	"github.com/libp2p/go-libp2p-core/network"
@@ -51,7 +51,7 @@ func StreamHandler(stream network.Stream) {
 func CraftNode(
 	ctx context.Context,
 	port int,
-	handler network.StreamHandler) (node host.Host, dhtOut *dht.Ipfs, err error) {
+	handler network.StreamHandler) (node host.Host, dhtOut *dht.IpfsDHT, err error) {
 	// Create ListAddrStrings
 	tcpip4 := fmt.Sprintf("/ip4/0.0.0.0/tcp/%d", port)
 	node, err = libp2p.New(
